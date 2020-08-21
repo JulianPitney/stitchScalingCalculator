@@ -1,17 +1,17 @@
 x0 = 2448
 y0 = 2048
-z0 = 710
+z0 = int(input("z0: "))
 ovx = 245
 ovy = 205
-dimx = 2
-dimy = 3
+dimx = int(input("dimx: "))
+dimy = int(input("dimy: "))
 umppx0 = 1.43
 umppy0 = 1.43
 umppz0 = 5.0
 
-xf = 2372
-yf = 2956
-zf = 606
+xf = int(input("xf: "))
+yf = int(input("yf: "))
+zf = int(input("zf: "))
 
 umppx = None
 umppy = None
@@ -30,5 +30,5 @@ def calcScaling():
 
     return [umppx, umppy, umppz]
 
-print("um_per_pixel_x,um_per_pixel_y,um_per_pixel_z")
-print(calcScaling())
+with open('stitched_scaling.csv', 'w') as f:
+    f.write(str(calcScaling()) + "\n")
